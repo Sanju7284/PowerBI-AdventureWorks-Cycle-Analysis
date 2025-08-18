@@ -50,6 +50,7 @@ Here is the schema used for data modeling in Power BI:
 ---
 
 ## 🧮 Key Measures (DAX examples)
+``` DAX
 
 -- Core
 
@@ -76,5 +77,5 @@ IF(
     )
 )
 
-
+```
 ---
