@@ -51,8 +51,8 @@ Here is the schema used for data modeling in Power BI:
 
 ## 🧮 Key Measures (DAX examples)
 
-```DAX
 -- Core
+
 Total_Order = DISTINCTCOUNT(AW_Sales_Data_2015_17[OrderNumber])
 Total_Revenue = SUMX(AW_Sales_Data_2015_17,AW_Sales_Data_2015_17[OrderQuantity]*RELATED(AW_Products[ProductPrice]))
 Total_Cost = SUMX(AW_Sales_Data_2015_17,AW_Sales_Data_2015_17[OrderQuantity]*RELATED(AW_Products[ProductCost]))
@@ -75,6 +75,6 @@ IF(
         )
     )
 )
-```
+
 
 ---
