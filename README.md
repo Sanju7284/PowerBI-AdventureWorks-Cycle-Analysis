@@ -19,7 +19,7 @@ The final dashboard is designed to help stakeholders make **data-driven decision
 
 ## 🛠 Tools Used  
 - **Excel** (data prep/sample dataset)
-👉 [Datasets File](./Datasets/)
+👉 [Datasets File](./DataSets/)
 - **Power BI** – Data visualization and dashboarding  
 - **Power Query** – Data cleaning and shaping  
 - **DAX (Data Analysis Expressions)** – Calculations and measures
@@ -51,7 +51,6 @@ Here is the schema used for data modeling in Power BI:
 
 ## 🧮 Key Measures (DAX examples)
 ``` DAX
-
 -- Core
 
 Total_Order = DISTINCTCOUNT(AW_Sales_Data_2015_17[OrderNumber])
@@ -79,3 +78,44 @@ IF(
 
 ```
 ---
+
+---
+
+## 📊 Power BI Dashboard
+
+### **Executive Summary** 
+
+<img width="1084" height="669" alt="image" src="https://github.com/user-attachments/assets/616442bf-8106-4e97-8199-a30a728fd633" />
+
+### **Customer Details** 
+
+<img width="1217" height="668" alt="image" src="https://github.com/user-attachments/assets/efa86d68-3949-4597-a22c-d6ea27b375d3" />
+
+### **Product Details**
+
+<img width="1140" height="669" alt="image" src="https://github.com/user-attachments/assets/739cd32b-a05a-40fb-aa8f-7da5c481da07" />
+
+---
+
+---
+
+## 🔑 Key Insights
+- **Top Customers:** 20% of customers drive ~65% of revenue.  
+- **Regional Trends:** North America leads in sales, but Europe has higher profit margins.  
+- **Product Mix:** Accessories generate volume, but Bikes bring the highest revenue share.  
+- **Customer Behavior:** Higher income groups spend significantly more per order.  
+- **What-If Analysis:** A 5% price increase scenario showed profit improvement without major customer churn.  
+
+---
+
+## ✅ Conclusion
+The analysis of AdventureWorks data provided valuable insights into **sales performance, customer behavior, and product profitability**.  
+With these insights, AdventureWorks management can **optimize pricing strategies, target high-value customers, and focus on profitable regions**.  
+
+---
+
+## 📬 Contact
+👤 Author: **Mohan Kumar**  
+📧 Email: **mohan122000kumar@gmail.com**  
+
+⭐ *Feel free to fork or star this repo if you found it useful!*  
