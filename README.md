@@ -83,15 +83,15 @@ IF(
 
 ## 📊 Power BI Dashboard
 
-### **Executive Summary** 
+### **📃 Executive Summary** 
 
 <img width="1084" height="669" alt="image" src="https://github.com/user-attachments/assets/616442bf-8106-4e97-8199-a30a728fd633" />
 
-### **Customer Details** 
+### **👨‍👩‍👧‍👦 Customer Details** 
 
 <img width="1217" height="668" alt="image" src="https://github.com/user-attachments/assets/efa86d68-3949-4597-a22c-d6ea27b375d3" />
 
-### **Product Details**
+### **🏍️ Product Details**
 
 <img width="1140" height="669" alt="image" src="https://github.com/user-attachments/assets/739cd32b-a05a-40fb-aa8f-7da5c481da07" />
 
@@ -117,5 +117,6 @@ With these insights, AdventureWorks management can **optimize pricing strategies
 ## 📬 Contact
 👤 Author: **Mohan Kumar**  
 📧 Email: **mohan122000kumar@gmail.com**  
+
 
 ⭐ *Feel free to fork or star this repo if you found it useful!*  
