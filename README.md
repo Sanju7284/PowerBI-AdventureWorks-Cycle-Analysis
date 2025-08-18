@@ -1,4 +1,4 @@
-# 🚴 Adventure Works Cycles Analysis
+# 🚴 Adventure Works Cycles Analysis|Power-BI
 
 Adventure Works is a **Microsoft sample database** that simulates a multinational manufacturing company producing and selling cycles and related products.  
 In this project, I connected and shaped the raw data using **Power Query**, built a **relational data model**, and created **calculated fields with DAX measures**.  
