@@ -36,3 +36,45 @@ Here is the schema used for data modeling in Power BI:
 <sup>*ERD showing relationships among dimension and fact tables*</sup>
 
 ---
+---
+
+## ❓ Key Business Questions Answered
+1. Which customers and regions are most profitable?  
+2. What product categories contribute the most revenue & profit?  
+3. How do income levels and occupations affect purchasing?  
+4. What is the effect of price adjustment (What-If parameter) on total profit?  
+5. How does sales performance vary across time (year/quarter/month)?  
+
+---
+
+---
+
+## 🧮 Key Measures (DAX examples)
+
+```DAX
+-- Core
+Total_Order = DISTINCTCOUNT(AW_Sales_Data_2015_17[OrderNumber])
+Total_Revenue = SUMX(AW_Sales_Data_2015_17,AW_Sales_Data_2015_17[OrderQuantity]*RELATED(AW_Products[ProductPrice]))
+Total_Cost = SUMX(AW_Sales_Data_2015_17,AW_Sales_Data_2015_17[OrderQuantity]*RELATED(AW_Products[ProductCost]))
+Total Profit  = [Total Revenue] - [Total Cost]
+
+-- What‑If parameter (auto-created by Power BI when you add a Numeric Range parameter)
+-- 'Price Adjustment (%)'[Price Adjustment (%)]  -- between -1 and +1 for -100%..+100%
+
+Adjusted_Price = [Avg_retail_Price]*(1+'Price_Adjustment(%)'[Price_Adjustment(%) Value])
+
+-- Example: Income banding
+Income Level = 
+IF(
+    AW_Customers[AnnualIncome] <= 40000, "Low",
+    IF(
+        AW_Customers[AnnualIncome] <= 90000, "Average",
+        IF(
+            AW_Customers[AnnualIncome] <= 130000, "High",
+            "Very High"
+        )
+    )
+)
+```
+
+---
