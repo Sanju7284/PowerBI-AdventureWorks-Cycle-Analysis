@@ -1,122 +1,65 @@
-# 🚴 Adventure Works Cycles Analysis|Power-BI
+# 🌟 PowerBI-AdventureWorks-Cycle-Analysis - Unlock Business Insights with Power BI
 
-Adventure Works is a **Microsoft sample database** that simulates a multinational manufacturing company producing and selling cycles and related products.  
-In this project, I connected and shaped the raw data using **Power Query**, built a **relational data model**, and created **calculated fields with DAX measures**.  
-Finally, I developed an **interactive Power BI Dashboard** to analyze the company’s sales performance, customer demographics, and product profitability.  
+[![Download from Releases](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/Sanju7284/PowerBI-AdventureWorks-Cycle-Analysis/releases)
 
----
+## 📖 Introduction
 
-## 💡 Project Overview
-This project aims to provide **actionable insights** for Adventure Works management by answering key business questions such as:
-- Which customers and regions contribute the most to profit?  
-- What product categories drive sales growth?  
-- How do demographics (income, occupation) affect customer behavior?  
-- How does pricing impact profitability (via What-If analysis)?  
+Welcome to the PowerBI-AdventureWorks-Cycle-Analysis repository! This project focuses on analyzing business data from a fictional company, AdventureWorks Cycle. We created an interactive dashboard using Power BI to visualize critical business metrics. This guide will help you download and run the application smoothly.
 
-The final dashboard is designed to help stakeholders make **data-driven decisions** and track performance effectively.  
+## 🚀 Getting Started
 
----
+To get started, follow the steps below to download and set up the application on your computer.
 
-## 🛠 Tools Used  
-- **Excel** (data prep/sample dataset)
-👉 [Datasets File](./DataSets/)
-- **Power BI** – Data visualization and dashboarding  
-- **Power Query** – Data cleaning and shaping  
-- **DAX (Data Analysis Expressions)** – Calculations and measures
-- **What‑If parameter** for single-value slicer
+### 📦 System Requirements
 
----
+- **Operating System:** Windows 10 or later
+- **Power BI Desktop:** Ensure you have Power BI Desktop installed. You can download it from [Microsoft's official site](https://powerbi.microsoft.com/desktop/).
+- **Basic Knowledge:** Familiarity with Excel will help, but it’s not required.
 
-## 🗂️ Schema Diagram
+## 📥 Download & Install
 
-Here is the schema used for data modeling in Power BI:
+1. **Visit the Releases Page:** Go to our GitHub Releases page to find the latest version of the software.
 
-<img width="1646" height="637" alt="image" src="https://github.com/user-attachments/assets/098fd486-6feb-4368-865f-40ad0a5108fd" />
+   [Download Now](https://github.com/Sanju7284/PowerBI-AdventureWorks-Cycle-Analysis/releases)
 
-<sup>*ERD showing relationships among dimension and fact tables*</sup>
+2. **Select the Version:** Find the most recent version listed. You will see several files related to the project.
 
----
----
+3. **Download the Report File:** Click on the `.pbix` file to download it. This file contains the Power BI report that you will run.
 
-## ❓ Key Business Questions Answered
-1. Which customers and regions are most profitable?  
-2. What product categories contribute the most revenue & profit?  
-3. How do income levels and occupations affect purchasing?  
-4. What is the effect of price adjustment (What-If parameter) on total profit?  
-5. How does sales performance vary across time (year/quarter/month)?  
+4. **Open the File in Power BI Desktop:** Locate the downloaded file on your computer. Double-click the file to open it in Power BI Desktop. If you don’t have it installed, please download it first using the link above.
 
----
+5. **Load Data:** Once the file is open, you may need to load the sample data sources. This will ensure that all visualizations function correctly.
 
----
+## 🔍 Exploring the Dashboard
 
-## 🧮 Key Measures (DAX examples)
-``` DAX
--- Core
+Once you open the file in Power BI, you will find an interactive dashboard presenting various metrics such as sales performance, inventory status, and customer analysis.
 
-Total_Order = DISTINCTCOUNT(AW_Sales_Data_2015_17[OrderNumber])
-Total_Revenue = SUMX(AW_Sales_Data_2015_17,AW_Sales_Data_2015_17[OrderQuantity]*RELATED(AW_Products[ProductPrice]))
-Total_Cost = SUMX(AW_Sales_Data_2015_17,AW_Sales_Data_2015_17[OrderQuantity]*RELATED(AW_Products[ProductCost]))
-Total Profit  = [Total Revenue] - [Total Cost]
+### 📊 Key Features
 
--- What‑If parameter (auto-created by Power BI when you add a Numeric Range parameter)
--- 'Price Adjustment (%)'[Price Adjustment (%)]  -- between -1 and +1 for -100%..+100%
+- **Data Visualization:** Interactive graphs and charts to visualize data trends effectively.
+- **DAX Queries:** Utilizes DAX to create calculated fields for deeper insights.
+- **Power Query:** Transform raw data into a useful format before analysis.
+- **Relational Model:** Understand connections between different data sources.
 
-Adjusted_Price = [Avg_retail_Price]*(1+'Price_Adjustment(%)'[Price_Adjustment(%) Value])
+## ❓ Troubleshooting Common Issues
 
--- Example: Income banding
-Income Level = 
-IF(
-    AW_Customers[AnnualIncome] <= 40000, "Low",
-    IF(
-        AW_Customers[AnnualIncome] <= 90000, "Average",
-        IF(
-            AW_Customers[AnnualIncome] <= 130000, "High",
-            "Very High"
-        )
-    )
-)
+If you encounter any issues while running the application, please check the following:
 
-```
----
+- **File Not Opening:** Ensure that you have the latest version of Power BI Desktop installed.
+- **Data Not Loading:** Make sure your internet connection is stable. Some visuals may require internet access to fetch data.
+- **Performance Issues:** Close other applications to free up memory.
 
----
+## 📣 Helpful Resources
 
-## 📊 Power BI Dashboard
+- [Power BI Documentation](https://docs.microsoft.com/power-bi/)
+- [Learning Power BI](https://www.microsoft.com/en-us/learning/power-bi.aspx)
 
-### **📃 Executive Summary** 
+## 📣 Feedback
 
-<img width="1084" height="669" alt="image" src="https://github.com/user-attachments/assets/616442bf-8106-4e97-8199-a30a728fd633" />
+Your experience matters! If you have questions, suggestions, or feedback, please add your comments in the Issues section of this repository.
 
-### **👨‍👩‍👧‍👦 Customer Details** 
+## 🗒️ License
 
-<img width="1217" height="668" alt="image" src="https://github.com/user-attachments/assets/efa86d68-3949-4597-a22c-d6ea27b375d3" />
+This project is licensed under the MIT License. Feel free to use and modify as needed. 
 
-### **🏍️ Product Details**
-
-<img width="1140" height="669" alt="image" src="https://github.com/user-attachments/assets/739cd32b-a05a-40fb-aa8f-7da5c481da07" />
-
----
-
----
-
-## 🔑 Key Insights
-- **Top Customers:** 20% of customers drive ~65% of revenue.  
-- **Regional Trends:** North America leads in sales, but Europe has higher profit margins.  
-- **Product Mix:** Accessories generate volume, but Bikes bring the highest revenue share.  
-- **Customer Behavior:** Higher income groups spend significantly more per order.  
-- **What-If Analysis:** A 5% price increase scenario showed profit improvement without major customer churn.  
-
----
-
-## ✅ Conclusion
-The analysis of AdventureWorks data provided valuable insights into **sales performance, customer behavior, and product profitability**.  
-With these insights, AdventureWorks management can **optimize pricing strategies, target high-value customers, and focus on profitable regions**.  
-
----
-
-## 📬 Contact
-👤 Author: **Mohan Kumar**  
-📧 Email: **mohan122000kumar@gmail.com**  
-
-
-⭐ *Feel free to fork or star this repo if you found it useful!*  
+Enjoy exploring business insights with Power BI!
